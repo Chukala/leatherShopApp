@@ -20,7 +20,8 @@ export const ProductsProvider = ({ children }) => {
   useEffect(() => {
     handleProducts();
     filterItem();
-  }, []); //Only re-run the effect if products changes
+  }, []); 
+  //Only re-run the effect if products changes
 
   /** prductsData is JSON file and
    * imported from local file
@@ -121,7 +122,7 @@ export const ProductsProvider = ({ children }) => {
   const filterItem = () => {
     let tempFiltered = [];
     tempFiltered = products.filter((item) => item.prdType == "popular");
-    //console.log(tempFiltered);
+    console.log(tempFiltered);
     updateFilteredProducts([...tempFiltered]);
   };
 

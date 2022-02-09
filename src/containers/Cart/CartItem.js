@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { View, Text, StyleSheet, Image, Button } from "react-native";
+import { View, Text, StyleSheet, Image, Button, Platform } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import ProductsProvider from "../../contexts/ProductsProvider";
 
@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
   prdAttribute: {
     paddingBottom: 10
   },
+  
   prdAttributeText: {
     textTransform: "capitalize"
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Platform } from 'react-native';
 import { FontAwesome } from "@expo/vector-icons";
 const Footer = () => {
     return(
@@ -32,8 +32,20 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        backgroundColor: '#333',
-        padding: 20
+        ...Platform.select({
+            ios: {
+                backgroundColor: "#f1f1f1",
+                padding: 20,
+            },
+            android: {
+                backgroundColor: '#333',
+                padding: 20,
+            },
+            default: {
+                backgroundColor: "green",
+                padding: 20,
+            }
+        })
     },
     footerColumn_1: {
         width: '100%',
